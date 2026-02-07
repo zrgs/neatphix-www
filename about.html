@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neatphix — Privacy Policy</title>
+    <title>Neatphix — Private Photo Sharing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,400&display=swap" rel="stylesheet">
@@ -76,14 +76,92 @@
             letter-spacing: -0.02em;
         }
 
-        .header-badge {
-            font-size: 0.75rem;
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .header-nav a {
+            font-size: 0.85rem;
             color: var(--text-muted);
-            background: var(--bg);
-            padding: 0.3rem 0.75rem;
-            border-radius: 100px;
-            border: 1px solid var(--border);
+            text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: var(--text);
+        }
+
+        /* ── About Section ── */
+        .about {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 2rem;
+        }
+
+        .about h1 {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: var(--text);
+        }
+
+        .about .tagline {
+            margin-top: 1rem;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 560px;
+            line-height: 1.65;
+            font-style: italic;
+        }
+
+        .about-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+
+        .about-body p {
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+            font-size: 0.975rem;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature {
+            font-size: 0.975rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .feature span {
+            margin-right: 0.4rem;
+        }
+
+        .about-closing {
+            margin-top: 1.5rem;
+            font-size: 0.975rem;
+            color: var(--text-muted);
+        }
+
+        .about-closing strong {
+            color: var(--text);
+        }
+
+        .divider {
+            max-width: 720px;
+            margin: 0 auto;
+            border: none;
+            border-top: 1px solid var(--border);
         }
 
         /* ── Hero ── */
@@ -233,10 +311,12 @@
 
         /* ── Responsive ── */
         @media (max-width: 600px) {
+            .about { padding: 3rem 1.25rem 1.5rem; }
+            .about-body { padding: 0 1.25rem 1.5rem; }
             .hero { padding: 3rem 1.25rem 1.5rem; }
             .content { padding: 0.5rem 1.25rem 4rem; }
             .section { padding: 2rem 0; }
-            .header-badge { display: none; }
+            .header-nav { gap: 1rem; }
         }
     </style>
 </head>
@@ -250,11 +330,38 @@
                 </div>
                 <span class="logo-text">Neatphix</span>
             </a>
-            <span class="header-badge">Privacy Policy</span>
+            <nav class="header-nav">
+                <a href="#about">About</a>
+                <a href="#privacy">Privacy Policy</a>
+            </nav>
         </div>
     </header>
 
-    <div class="hero">
+    <div id="about" class="about">
+        <h1>Stop making WhatsApp groups for every birthday party.</h1>
+        <p class="tagline">Neatphix is the fastest way to share photos at any event — without exchanging phone numbers, creating accounts, or joining another group chat.</p>
+    </div>
+
+    <div class="about-body">
+        <p>One person creates a group. Everyone else scans a QR code. That's it. You're in, sharing photos instantly. No signup. No email. No name. Nothing.</p>
+
+        <p>Every photo is end-to-end encrypted. Nobody can see them — not us, not hackers, not anyone. When the event is over, photos are automatically deleted from our servers. Keep what you want and move on.</p>
+
+        <div class="features">
+            <div class="feature"><span>🔒</span> Fully anonymous — no accounts, no registration, nothing to hack or leak</div>
+            <div class="feature"><span>📸</span> Scan a QR code and start sharing — no invites, no friend requests</div>
+            <div class="feature"><span>👨‍👩‍👧‍👦</span> So simple even grandma can use it — no login required</div>
+            <div class="feature"><span>🙈</span> Don't want to be in photos? One tap and your face is auto-blurred</div>
+            <div class="feature"><span>⚡</span> Tiny app, fast, works on any phone</div>
+        </div>
+
+        <p class="about-closing">No ads. No tracking. No algorithms. No social media nonsense.</p>
+        <p class="about-closing"><strong>Be in the moment. Share the photos. Forget the rest.</strong></p>
+    </div>
+
+    <hr class="divider">
+
+    <div id="privacy" class="hero">
         <h1>Privacy Policy</h1>
         <p>Neatphix is built so we <strong>cannot</strong> access your data — not because we promise not to, but because our architecture makes it impossible.</p>
         <div class="updated">Last updated — February 2026</div>
