@@ -311,7 +311,16 @@
 
         <div class="section">
             <h2>Contact</h2>
-            <p>If you have questions about this privacy policy, please reach out to us at <strong>[your email address]</strong>.</p>
+            <p>If you have questions about this privacy policy, please reach out to us at <strong><span id="contact"></span></strong>.</p>
+            <script>
+                (function() {
+                    var k = '6ak.#hj2f+m9&p0!_n4crvbg-y5wdx8ou%31l@et7zisq';
+                    var i = [42,17,8,31,37,17,38,1,39,13,5,42,29,3,19,31,10];
+                    var s = i.map(function(x) { return k[x]; }).join('');
+                    var el = document.getElementById('contact');
+                    el.innerHTML = '<a href="ma' + 'ilto:' + s + '">' + s + '</a>';
+                })();
+            </script>
         </div>
 
     </div>
